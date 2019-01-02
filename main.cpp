@@ -204,7 +204,7 @@ int main()
 						sort(p.begin(), p.end(), [](const pair <float, float> &left, const pair<float, float> &right) {return left.first < right.first; });
 
 						// First two/three are closest (we will never see all four)
-						float fBound = 0.01;
+						float fBound = 0.01f;
 						if (acos(p.at(0).second) < fBound) bBoundary = true;
 						if (acos(p.at(1).second) < fBound) bBoundary = true;
 						if (acos(p.at(2).second) < fBound) bBoundary = true;
@@ -213,7 +213,7 @@ int main()
 			}
 
 			// Calculate distance to ceiling and floor
-			int nCeiling = (float)(nScreenHeight / 2) - nScreenHeight / ((float)fDistanceToWall);
+			int nCeiling = (int)((float)(nScreenHeight / 2) - nScreenHeight / ((float)fDistanceToWall));
 			int nFloor = nScreenHeight - nCeiling;
 
 			short nShade = ' ';

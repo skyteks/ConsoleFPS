@@ -27,9 +27,9 @@
 /ConsoleFPS/Debug/*.exe
 /ConsoleFPS/Debug/*.out
 /ConsoleFPS/Debug/*.app
-#/ConsoleFPS/Debug
-/ConsoleFPS/Release
+/ConsoleFPS.tlog
 Debug
+Release
 
 # Visual Studio Files
 /.vs
