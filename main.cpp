@@ -113,11 +113,16 @@ int main()
 		if (GetAsyncKeyState((unsigned short)'W') & 0x8000)
 		{
 			fPlayerX += sinf(fPlayerA) * fSpeed * fElapsedTime;
-			fPlayerY += cosf(fPlayerA) * fSpeed * fElapsedTime;
 
 			if (map.c_str()[(int)fPlayerX * nMapWidth + (int)fPlayerY] == '#')
 			{
 				fPlayerX -= sinf(fPlayerA) * fSpeed * fElapsedTime;
+			}
+
+			fPlayerY += cosf(fPlayerA) * fSpeed * fElapsedTime;
+
+			if (map.c_str()[(int)fPlayerX * nMapWidth + (int)fPlayerY] == '#')
+			{
 				fPlayerY -= cosf(fPlayerA) * fSpeed * fElapsedTime;
 			}
 		}
@@ -125,11 +130,16 @@ int main()
 		if (GetAsyncKeyState((unsigned short)'S') & 0x8000)
 		{
 			fPlayerX -= sinf(fPlayerA) * fSpeed * fElapsedTime;
-			fPlayerY -= cosf(fPlayerA) * fSpeed * fElapsedTime;
 
 			if (map.c_str()[(int)fPlayerX * nMapWidth + (int)fPlayerY] == '#')
 			{
 				fPlayerX += sinf(fPlayerA) * fSpeed * fElapsedTime;
+			}
+
+			fPlayerY -= cosf(fPlayerA) * fSpeed * fElapsedTime;
+
+			if (map.c_str()[(int)fPlayerX * nMapWidth + (int)fPlayerY] == '#')
+			{
 				fPlayerY += cosf(fPlayerA) * fSpeed * fElapsedTime;
 			}
 		}
