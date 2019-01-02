@@ -262,7 +262,26 @@ int main()
 				screen[(ny + 1) * nScreenWidth + nx] = map[ny * nMapWidth + nx];
 			}
 		}
-		screen[((int)fPlayerX + 1) * nScreenWidth + (int)fPlayerY] = 'P';
+
+		// Display player in map
+		short nPlayer = 'P';
+		if (fPlayerA > (-fPi / 4.0f) && fPlayerA < (fPi / 4.0f))
+		{
+			nPlayer = 0x2192;// right
+		}
+		else if (fPlayerA > (-fPi / 4.0f) * 3.0f && fPlayerA < (-fPi / 4.0f))
+		{
+			nPlayer = 0x2191;// up
+		}
+		else if (fPlayerA > (fPi / 4.0f) && fPlayerA < (fPi / 4.0f) * 3.0f)
+		{
+			nPlayer = 0x2193;// down
+		}
+		else
+		{
+			nPlayer = 0x2190;// left
+		}
+		screen[((int)fPlayerX + 1) * nScreenWidth + (int)fPlayerY] = nPlayer;
 
 		screen[nScreenWidth * nScreenHeight] = '\0';
 		WriteConsoleOutputCharacter(hConsole, screen, nScreenWidth * nScreenHeight, { 0,0 }, &dwBytesWritten);
