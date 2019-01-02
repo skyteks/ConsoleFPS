@@ -265,6 +265,38 @@ int main()
 
 		// Display player in map
 		short nPlayer = 'P';
+		//if (fPlayerA > (fPi / 8.0f) * -1.0f && fPlayerA < (fPi / 8.0f) * 1.0f)
+		//{
+		//	nPlayer = 0x2192;// right
+		//}
+		//else if (fPlayerA > (fPi / 8.0f) * -3.0f && fPlayerA < (fPi / 8.0f) * -1.0f)
+		//{
+		//	nPlayer = 0x2197;// up-right
+		//}
+		//else if (fPlayerA > (fPi / 8.0f) * -5.0f && fPlayerA < (fPi / 8.0f) * -3.0f)
+		//{
+		//	nPlayer = 0x2191;// up
+		//}
+		//else if (fPlayerA > (fPi / 8.0f) * -7.0f && fPlayerA < (fPi / 8.0f) * -5.0f)
+		//{
+		//	nPlayer = 0x2196;// up-left
+		//}
+		//else if (fPlayerA > (fPi / 8.0f) * 1.0f && fPlayerA < (fPi / 8.0f) * 3.0f)
+		//{
+		//	nPlayer = 0x2198;// down-right
+		//}
+		//else if (fPlayerA > (fPi / 8.0f) * 3.0f && fPlayerA < (fPi / 8.0f) * 5.0f)
+		//{
+		//	nPlayer = 0x2193;// down
+		//}
+		//else if (fPlayerA > (fPi / 8.0f) * 5.0f && fPlayerA < (fPi / 8.0f) * 7.0f)
+		//{
+		//	nPlayer = 0x2199;// down-left
+		//}
+		//else
+		//{
+		//	nPlayer = 0x2190;// left
+		//}
 		if (fPlayerA > (-fPi / 4.0f) && fPlayerA < (fPi / 4.0f))
 		{
 			nPlayer = 0x2192;// right
