@@ -17,15 +17,11 @@
 	https://github.com/OneLoneCoder/videos/blob/master/LICENSE
 */
 
-#include <iostream>
 #include <vector>
-#include <utility>
 #include <algorithm>
 #include <chrono>
-#include <math.h>
 using namespace std;
 
-#include <stdio.h>
 #include <Windows.h>
 
 int nScreenWidth = 120;// Console Screen Size X (columns)
